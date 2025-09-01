@@ -1,0 +1,461 @@
+/* =========================
+   GLOBAL STYLES & RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #fff;  
+  background: rgb(4, 9, 29);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background:rgb(4,9,29); /* Black navbar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  color: #fff;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+   font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: rgba(198, 63, 26, 1); 
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: rgb(4, 9, 29);
+  color:rgb(4, 9, 29);
+  padding: 0 10%;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero-text h3 {
+  font-size: 2rem;
+  color: #fff; 
+  margin-bottom: 15px;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem; /* bigger than h3 */
+  color: rgba(198, 63, 26, 1); /* highlight color for name */
+  margin-bottom: 25px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color:#fff;
+}
+
+.social-icons {
+  margin-top: 15px;
+  
+}
+
+.social-icons a {
+  color: #fff; 
+  font-size: 1.6rem;
+  margin-right: 30px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+ color: rgba(198, 63, 26, 1);
+  transform: scale(1.2);
+}
+
+.hero-image {
+  position: relative;
+  margin-top: 20px;
+  margin-left: 200px;
+  
+}
+
+.image-circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+   border: 6px solid rgba(198, 63, 26, 1);
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 30px rgba(198, 63, 26, 0.5); 
+  transition: transform 0.3s ease;
+}
+
+.image-circle:hover {
+  transform: scale(1.05);
+}
+
+.image-circle img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+#about {
+  box-shadow: 0 0 30px rgba(198, 63, 26, 0.5); 
+  color: #fff;
+  padding: 100px 10%;
+  text-align: center;
+  border-radius: 10px;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+   color: #fff; 
+  margin-bottom: 30px;
+  position: relative;
+  margin-top: 30px;
+}
+
+#about h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: rgba(198, 63, 26, 1);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+#about p {
+  font-size: 1.15rem;
+   color: #ddd;
+  max-width: 850px;
+  margin: 0 auto;
+  line-height: 1.9;
+  text-align: center;
+  padding: 0 15px;
+   margin-top: 40px; 
+}
+
+
+/* ======= Skills SECTION ======= */
+
+#skills {
+  padding: 60px 20px;
+  text-align: center;
+  background: rgb(4, 9, 29); 
+  min-height: 100vh;
+
+  
+}
+
+
+#skills h2 {
+   font-size: 2.5rem;
+  color: #fff; /* white text */
+  margin-bottom: 40px;
+  position: relative;
+}
+#skills h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: rgba(198, 63, 26, 1);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+  justify-items: center;
+
+}
+
+/* Skill Card */
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 30px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+/* Hover effect */
+.skill:hover {
+   border: 2px solid rgba(198, 63, 26, 1); /* full color border */
+  transform: scale(1.05); /* slightly increase size */
+  box-shadow: 0 0 15px rgba(198, 63, 26, 0.8), 0 0 30px rgba(198, 63, 26, 0.6);
+}
+
+/* Icon styling */
+.skill i {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+/* Text under icons */
+.skill p {
+  margin: 0;
+  font-size: 1rem;
+  color:white;
+  font-weight: bold;
+}
+
+
+/* =========================
+   PROJECTS SECTION
+========================= */
+#projects {
+  padding: 80px 20px;
+  background: rgb(4, 9, 29);
+  text-align: center;
+  color: rgb(4, 9, 29);
+  min-height: 100vh;
+  margin-top: 30px;
+}
+
+#projects h2 {
+   font-size: 2.5rem;
+  color: #fff; /* white text */
+  margin-bottom: 40px;
+  position: relative;
+}
+#projects h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: rgba(198, 63, 26, 1);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+  
+}
+
+.project-card {
+   background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 20px;
+  font-size: 1rem; 
+   color: white;
+   border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.project-card:hover {
+  border: 2px solid rgba(198, 63, 26, 1); /* full color border */
+  transform: scale(1.05); /* slightly increase size */
+  box-shadow: 0 0 15px rgba(198, 63, 26, 0.8), 0 0 30px rgba(198, 63, 26, 0.6); /* brighter glowing effect */
+}
+.repo-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: rgba(198, 63, 26, 1);  /* orange button */
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+
+
+
+/* =========================
+   CONTACT SECTION
+========================= */
+#contact {
+  padding: 80px 20px;
+   background: rgb(4, 9, 29); 
+  text-align: center;
+ 
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  color: #fff; /* white text */
+  margin-bottom: 20px;
+  position: relative;
+}
+#contact h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: rgba(198, 63, 26, 1); 
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.contact-section p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 500;
+
+   max-width: 600px; /* limits paragraph width */
+  margin: 80px auto; 
+  text-align: center;
+}
+
+
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.contact-card a {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin: 0 15px;
+  border-radius: 50%;
+  color: rgba(198, 63, 26, 1);
+              
+  font-size: 28px;
+  line-height: 60px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.contact-card a:hover {
+  transform: scale(1.2);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: rgb(4, 9, 29);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-image {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-info {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-card {
+    width: 80%;
+  }
+}
