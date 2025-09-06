@@ -353,48 +353,103 @@ body {
 #contact {
   box-shadow: 0 0 30px rgba(198, 63, 26, 0.5);
   padding: 80px 20px;
-   background: rgb(4, 9, 29); 
+  background: rgb(4, 9, 29);
   text-align: center;
- 
 }
 
 #contact h2 {
   font-size: 2.5rem;
-  color: #fff; /* white text */
+  color: #fff;
   margin-bottom: 20px;
   position: relative;
 }
+
 #contact h2::after {
   content: '';
   display: block;
   width: 60px;
   height: 4px;
-  background: rgba(198, 63, 26, 1); 
+  background: rgba(198, 63, 26, 1);
   margin: 10px auto 0;
   border-radius: 2px;
 }
 
-.contact-section p {
-  font-size: 1.6rem;
+/* Paragraph text */
+.contact-text {
+  font-size: 1.2rem;
   line-height: 1.8;
   color: #ffffff;
-  max-width: 800px;
-  margin: 0 auto;
-  font-weight: 500;
-
-   max-width: 600px; /* limits paragraph width */
-  margin: 80px auto; 
-  text-align: center;
+  max-width: 600px;
+  margin: 40px auto;
+  font-weight: 400;
 }
 
+/* Contact Form */
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+}
 
-
-.contact-info {
+.contact-form form {
   display: flex;
-  justify-content: center;
-  margin-top: 30px;
+  flex-direction: column;
+  gap: 15px;
 }
 
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 2px solid rgba(198, 63, 26, 0.6);
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  background: #0d1b2a;
+  color: #fff;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form button {
+  background: rgba(198, 63, 26, 1);
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #a83219;
+  transform: scale(1.05);
+}
+
+/* Contact Info */
+.contact-info p {
+  margin: 8px 0;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  color: rgba(198, 63, 26, 1);
+}
+
+.contact-info a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  color: rgba(198, 63, 26, 1);
+}
+
+/* Social Icons */
 .contact-card a {
   display: inline-block;
   width: 60px;
@@ -402,15 +457,17 @@ body {
   margin: 0 15px;
   border-radius: 50%;
   color: rgba(198, 63, 26, 1);
-              
   font-size: 28px;
   line-height: 60px;
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
+  border: 2px solid rgba(198, 63, 26, 0.8);
 }
 
 .contact-card a:hover {
   transform: scale(1.2);
+  background: rgba(198, 63, 26, 0.9);
+  color: #fff;
 }
 
 /* =========================
