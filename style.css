@@ -7,6 +7,10 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+.nav-links a.active {
+  color: rgba(198, 63, 26, 1);
+  font-weight: bold;
+}
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -94,6 +98,28 @@ body {
   font-size: 1.1rem;
   margin-bottom: 25px;
   color:#fff;
+}
+.menu-toggle {
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rgb(4,9,29);
+    text-align: center;
+  }
+  .nav-links.show {
+    display: flex;
+  }
 }
 
 .social-icons {
@@ -261,6 +287,15 @@ body {
   font-size: 1rem;
   color:white;
   font-weight: bold;
+}
+.skill, .project-card, #about p, .contact-form, .contact-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+.skill.show, .project-card.show, #about p.show, .contact-form.show, .contact-card.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
