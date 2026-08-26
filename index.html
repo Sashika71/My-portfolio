@@ -15,15 +15,15 @@
   <!-- Navbar -->
   <nav class="fixed top-0 left-0 w-full z-50 bg-darkBg/80 backdrop-blur-md border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <div class="text-xl font-bold tracking-wider text-white cursor-pointer" onclick="showSection('home')">SASHIKA HANSANI</div>
+      <a href="#home" class="text-xl font-bold tracking-wider text-white">SASHIKA HANSANI</a>
       
       <!-- Desktop Nav Links -->
       <ul class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
-        <li><a href="#home" onclick="showSection('home')" class="hover:text-accentCyan transition-colors">Home</a></li>
-        <li><a href="#about" onclick="showSection('about')" class="hover:text-accentCyan transition-colors">About</a></li>
-        <li><a href="#skills" onclick="showSection('skills')" class="hover:text-accentCyan transition-colors">Skills</a></li>
-        <li><a href="#projects" onclick="showSection('projects')" class="hover:text-accentCyan transition-colors">Projects</a></li>
-        <li><a href="#contact" onclick="showSection('contact')" class="hover:text-accentCyan transition-colors">Contact</a></li>
+        <li><a href="#home" class="hover:text-accentCyan transition-colors">Home</a></li>
+        <li><a href="#about" class="hover:text-accentCyan transition-colors">About</a></li>
+        <li><a href="#skills" class="hover:text-accentCyan transition-colors">Skills</a></li>
+        <li><a href="#projects" class="hover:text-accentCyan transition-colors">Projects</a></li>
+        <li><a href="#contact" class="hover:text-accentCyan transition-colors">Contact</a></li>
       </ul>
 
       <!-- Download CV Button -->
@@ -39,20 +39,20 @@
 
     <!-- Mobile Dropdown Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-cardBg border-b border-slate-800 px-6 py-4 space-y-3">
-      <a href="#home" onclick="showSection('home')" class="block text-slate-300 hover:text-accentCyan">Home</a>
-      <a href="#about" onclick="showSection('about')" class="block text-slate-300 hover:text-accentCyan">About</a>
-      <a href="#skills" onclick="showSection('skills')" class="block text-slate-300 hover:text-accentCyan">Skills</a>
-      <a href="#projects" onclick="showSection('projects')" class="block text-slate-300 hover:text-accentCyan">Projects</a>
-      <a href="#contact" onclick="showSection('contact')" class="block text-slate-300 hover:text-accentCyan">Contact</a>
+      <a href="#home" class="block text-slate-300 hover:text-accentCyan">Home</a>
+      <a href="#about" class="block text-slate-300 hover:text-accentCyan">About</a>
+      <a href="#skills" class="block text-slate-300 hover:text-accentCyan">Skills</a>
+      <a href="#projects" class="block text-slate-300 hover:text-accentCyan">Projects</a>
+      <a href="#contact" class="block text-slate-300 hover:text-accentCyan">Contact</a>
       <a href="Sashika_Hansani_CV.pdf" download="Sashika_Hansani_CV.pdf" class="block bg-accentCyan text-darkBg font-semibold text-center py-2 rounded-lg text-sm">Download My CV</a>
     </div>
   </nav>
 
   <!-- Main Content Wrapper -->
-  <main class="flex-grow pt-28 pb-16">
+  <main class="flex-grow pt-20">
 
     <!-- Hero Section -->
-    <section id="home" class="page-section min-h-[70vh] flex items-center px-6 max-w-7xl mx-auto">
+    <section id="home" class="min-h-screen flex items-center px-6 max-w-7xl mx-auto py-16">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
         <div class="space-y-6">
           <h3 id="typing-heading" class="text-accentCyan font-semibold text-2xl tracking-wide">Hello, I'm</h3>
@@ -78,7 +78,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="page-section hidden px-6 max-w-4xl mx-auto space-y-8">
+    <section id="about" class="min-h-screen flex flex-col justify-center px-6 max-w-4xl mx-auto py-20 space-y-8">
       <h2 class="text-3xl font-bold text-white border-l-4 border-accentCyan pl-4">About Me</h2>
       <div class="space-y-6 text-mutedText leading-relaxed bg-cardBg p-8 rounded-2xl border border-slate-800 shadow-xl">
         <p>
@@ -95,7 +95,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="page-section hidden px-6 max-w-7xl mx-auto">
+    <section id="skills" class="min-h-screen flex flex-col justify-center px-6 max-w-7xl mx-auto py-20">
       <h2 class="text-3xl font-bold text-white mb-10 border-l-4 border-accentCyan pl-4">Technical Expertise</h2>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -160,7 +160,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="page-section hidden px-6 max-w-7xl mx-auto">
+    <section id="projects" class="min-h-screen flex flex-col justify-center px-6 max-w-7xl mx-auto py-20">
       <h2 class="text-3xl font-bold text-white mb-10 border-l-4 border-accentCyan pl-4">Selected Work</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         
@@ -169,8 +169,8 @@
           <div class="p-8 space-y-4">
             <div class="flex justify-between items-start">
               <h3 class="text-xl font-bold text-white">Crystal Clear Beauty</h3>
-              <a href="https://github.com/Sashika71" target="_blank" class="text-accentCyan hover:text-accentHover text-sm flex items-center gap-1">
-                <i class="fab fa-github"></i> Code
+              <a href="https://github.com/Sashika71/cbc-frontend.git" target="_blank" class="text-accentCyan hover:text-accentHover text-sm flex items-center gap-1">
+                <i class="fab fa-github"></i> 
               </a>
             </div>
             <p class="text-mutedText text-sm leading-relaxed">
@@ -193,8 +193,8 @@
           <div class="p-8 space-y-4">
             <div class="flex justify-between items-start">
               <h3 class="text-xl font-bold text-white">Tracko Bus</h3>
-              <a href="https://github.com/Sashika71" target="_blank" class="text-accentCyan hover:text-accentHover text-sm flex items-center gap-1">
-                <i class="fab fa-github"></i> Code
+              <a href="https://github.com/TrackoBus/trackobus-mobile.git" target="_blank" class="text-accentCyan hover:text-accentHover text-sm flex items-center gap-1">
+                <i class="fab fa-github"></i> 
               </a>
             </div>
             <p class="text-mutedText text-sm leading-relaxed">
@@ -217,8 +217,8 @@
           <div class="p-8 space-y-4">
             <div class="flex justify-between items-start">
               <h3 class="text-xl font-bold text-white">SmartMath</h3>
-              <a href="https://github.com/Sashika71" target="_blank" class="text-accentCyan hover:text-accentHover text-sm flex items-center gap-1">
-                <i class="fab fa-github"></i> Code
+              <a href="https://github.com/Sashika71/Mathmate.git" target="_blank" class="text-accentCyan hover:text-accentHover text-sm flex items-center gap-1">
+                <i class="fab fa-github"></i> 
               </a>
             </div>
             <p class="text-mutedText text-sm leading-relaxed">
@@ -238,8 +238,8 @@
           <div class="p-8 space-y-4">
             <div class="flex justify-between items-start">
               <h3 class="text-xl font-bold text-white">Gemzet</h3>
-              <a href="https://github.com/Sashika71" target="_blank" class="text-accentCyan hover:text-accentHover text-sm flex items-center gap-1">
-                <i class="fab fa-github"></i> Code
+              <a href="https://github.com/Sashika71/" target="_blank" class="text-accentCyan hover:text-accentHover text-sm flex items-center gap-1">
+                <i class="fab fa-github"></i> 
               </a>
             </div>
             <p class="text-mutedText text-sm leading-relaxed">
@@ -257,7 +257,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="page-section hidden px-6 max-w-3xl mx-auto space-y-12">
+    <section id="contact" class="min-h-screen flex flex-col justify-center px-6 max-w-3xl mx-auto py-20 space-y-12">
       <div class="text-center space-y-3">
         <h2 class="text-3xl font-bold text-white">Get In Touch</h2>
         <p class="text-mutedText text-sm">Currently open for new opportunities. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>

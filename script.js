@@ -1,6 +1,4 @@
-// =========================
-// MOBILE MENU TOGGLE
-// =========================
+
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
 
@@ -17,9 +15,7 @@ if (menuBtn && mobileMenu) {
   });
 }
 
-// =========================
-// TYPING EFFECT
-// =========================
+
 const typingText = document.getElementById("typing-heading");
 const text = "Hello, I'm";
 let index = 0;
@@ -33,9 +29,6 @@ function typeEffect() {
 }
 typeEffect();
 
-// =========================
-// FORM VALIDATION
-// =========================
 const form = document.querySelector("form");
 if (form) {
   form.addEventListener("submit", (e) => {
