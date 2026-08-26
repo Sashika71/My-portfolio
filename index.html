@@ -1,190 +1,309 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sashika Hansani | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- Tailwind Output CSS -->
+  <link rel="stylesheet" href="output.css">
+  <!-- FontAwesome & Devicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
-
 </head>
-<body>
+<body class="bg-darkBg text-slate-100 font-sans antialiased selection:bg-accentCyan selection:text-darkBg flex flex-col min-h-screen">
+
   <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">Sashika Hansani</div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <nav class="fixed top-0 left-0 w-full z-50 bg-darkBg/80 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="text-xl font-bold tracking-wider text-white cursor-pointer" onclick="showSection('home')">SASHIKA HANSANI</div>
+      
+      <!-- Desktop Nav Links -->
+      <ul class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <li><a href="#home" onclick="showSection('home')" class="hover:text-accentCyan transition-colors">Home</a></li>
+        <li><a href="#about" onclick="showSection('about')" class="hover:text-accentCyan transition-colors">About</a></li>
+        <li><a href="#skills" onclick="showSection('skills')" class="hover:text-accentCyan transition-colors">Skills</a></li>
+        <li><a href="#projects" onclick="showSection('projects')" class="hover:text-accentCyan transition-colors">Projects</a></li>
+        <li><a href="#contact" onclick="showSection('contact')" class="hover:text-accentCyan transition-colors">Contact</a></li>
+      </ul>
+
+      <!-- Download CV Button -->
+      <div class="hidden md:block">
+        <a href="Sashika_Hansani_CV.pdf" download="Sashika_Hansani_CV.pdf" class="bg-accentCyan text-darkBg font-semibold px-5 py-2.5 rounded-lg text-sm hover:bg-accentHover transition-all shadow-lg shadow-cyan-500/10">Download My CV</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-2xl text-slate-300 focus:outline-none">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-cardBg border-b border-slate-800 px-6 py-4 space-y-3">
+      <a href="#home" onclick="showSection('home')" class="block text-slate-300 hover:text-accentCyan">Home</a>
+      <a href="#about" onclick="showSection('about')" class="block text-slate-300 hover:text-accentCyan">About</a>
+      <a href="#skills" onclick="showSection('skills')" class="block text-slate-300 hover:text-accentCyan">Skills</a>
+      <a href="#projects" onclick="showSection('projects')" class="block text-slate-300 hover:text-accentCyan">Projects</a>
+      <a href="#contact" onclick="showSection('contact')" class="block text-slate-300 hover:text-accentCyan">Contact</a>
+      <a href="Sashika_Hansani_CV.pdf" download="Sashika_Hansani_CV.pdf" class="block bg-accentCyan text-darkBg font-semibold text-center py-2 rounded-lg text-sm">Download My CV</a>
+    </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-  <div class="hero-content">
-    <div class="hero-text">
-      <h3>Hello, It's Me</h3>
-      <h1>Sashika Hansani</h1>
-      <p>Undergraduate in Computing & Information Systems <br> Sabaragamuwa University of Sri Lanka</p>
+  <!-- Main Content Wrapper -->
+  <main class="flex-grow pt-28 pb-16">
 
-      <div class="social-icons">
-      <a href="0719738832" target="_blank"><i class="fab fa-whatsapp"></i></a>
-     <a href="https://www.linkedin.com/in/sashika-hansani-5495a6334/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.instagram.com/_.sashikaa_._?igsh=emo4cmZxaGtrOGYx" target="_blank"><i class="fab fa-instagram"></i></a>
-     <a href="https://github.com/Sashika71" target="_blank"> <i class="fab fa-github"></i>
-</a>
+    <!-- Hero Section -->
+    <section id="home" class="page-section min-h-[70vh] flex items-center px-6 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
+        <div class="space-y-6">
+          <h3 id="typing-heading" class="text-accentCyan font-semibold text-2xl tracking-wide">Hello, I'm</h3>
+          <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-tight">Sashika Hansani</h1>
+          <p class="text-mutedText text-lg md:text-xl leading-relaxed">
+            Undergraduate in Computing & Information Systems <br> Sabaragamuwa University of Sri Lanka
+          </p>
+
+          <!-- Social Icons -->
+          <div class="flex items-center space-x-4 pt-2">
+            <a href="mailto:sashikahansanii@gmail.com" title="Email" class="w-12 h-12 rounded-full bg-cardBg border border-slate-700 flex items-center justify-center text-slate-300 hover:text-accentCyan hover:border-accentCyan transition-all text-lg"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/sashika-hansani-5495a6334/" target="_blank" title="LinkedIn" class="w-12 h-12 rounded-full bg-cardBg border border-slate-700 flex items-center justify-center text-slate-300 hover:text-accentCyan hover:border-accentCyan transition-all text-lg"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Sashika71" target="_blank" title="GitHub" class="w-12 h-12 rounded-full bg-cardBg border border-slate-700 flex items-center justify-center text-slate-300 hover:text-accentCyan hover:border-accentCyan transition-all text-lg"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden border-2 border-slate-700 shadow-2xl shadow-cyan-500/5">
+            <img src="my.jpeg" alt="Sashika Hansani" class="w-full h-full object-cover hover:grayscale-0 transition-all duration-500">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="page-section hidden px-6 max-w-4xl mx-auto space-y-8">
+      <h2 class="text-3xl font-bold text-white border-l-4 border-accentCyan pl-4">About Me</h2>
+      <div class="space-y-6 text-mutedText leading-relaxed bg-cardBg p-8 rounded-2xl border border-slate-800 shadow-xl">
+        <p>
+          I am an undergraduate in <strong class="text-white">Computing and Information Systems</strong> at the Sabaragamuwa University of Sri Lanka, with a strong passion for 
+          <strong class="text-accentCyan">Full Stack Development, DevOps, Problem Solving, and Artificial Intelligence (AI)</strong>. I thrive on building scalable applications, optimizing deployment pipelines, and leveraging modern AI technologies to solve complex real-world challenges.
+        </p>
+        <p>
+          My interests also extend to exploring secure system architectures, networking, and clean code practices. I combine technical expertise with creativity to build solutions that are not only high-performing but also user-centric and robust.
+        </p>
+        <p>
+          I am driven to <strong class="text-white">contribute to impactful projects</strong>, collaborate with forward-thinking teams, and continuously expand my boundaries in the ever-evolving tech landscape.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="page-section hidden px-6 max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold text-white mb-10 border-l-4 border-accentCyan pl-4">Technical Expertise</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Programming Languages -->
+        <div class="bg-cardBg border border-slate-800 p-6 rounded-2xl space-y-3 hover:border-accentCyan transition-all">
+          <h3 class="text-lg font-bold text-accentCyan flex items-center gap-4">
+            <i class="fa-solid fa-code"></i> Programming Languages
+          </h3>
+          <p class="text-slate-300 text-sm leading-relaxed">JavaScript, Python, Java, Go, C, PHP</p>
+        </div>
+
+        <!-- Front End Frameworks -->
+        <div class="bg-cardBg border border-slate-800 p-6 rounded-2xl space-y-3 hover:border-accentCyan transition-all">
+          <h3 class="text-lg font-bold text-accentCyan flex items-center gap-4">
+            <i class="fa-solid fa-laptop-code"></i> Front End Frameworks
+          </h3>
+          <p class="text-slate-300 text-sm leading-relaxed">React.js, Tailwind CSS</p>
+        </div>
+
+        <!-- Back End Frameworks -->
+        <div class="bg-cardBg border border-slate-800 p-6 rounded-2xl space-y-3 hover:border-accentCyan transition-all">
+          <h3 class="text-lg font-bold text-accentCyan flex items-center gap-4">
+            <i class="fa-solid fa-server"></i> Back End Frameworks
+          </h3>
+          <p class="text-slate-300 text-sm leading-relaxed">Express.js, Spring Boot</p>
+        </div>
+
+        <!-- Mobile Development -->
+        <div class="bg-cardBg border border-slate-800 p-6 rounded-2xl space-y-3 hover:border-accentCyan transition-all">
+          <h3 class="text-lg font-bold text-accentCyan flex items-center gap-4">
+            <i class="fa-solid fa-mobile-screen"></i> Mobile Development
+          </h3>
+          <p class="text-slate-300 text-sm leading-relaxed">React Native</p>
+        </div>
+
+        <!-- Databases -->
+        <div class="bg-cardBg border border-slate-800 p-6 rounded-2xl space-y-3 hover:border-accentCyan transition-all">
+          <h3 class="text-lg font-bold text-accentCyan flex items-center gap-4">
+            <i class="fa-solid fa-database"></i> Databases
+          </h3>
+          <p class="text-slate-300 text-sm leading-relaxed">MySQL, PostgreSQL, MongoDB</p>
+        </div>
+
+        <!-- Tools & Version Control -->
+        <div class="bg-cardBg border border-slate-800 p-6 rounded-2xl space-y-3 hover:border-accentCyan transition-all">
+          <h3 class="text-lg font-bold text-accentCyan flex items-center gap-4">
+            <i class="fa-solid fa-tools"></i> Tools & Version Control
+          </h3>
+          <p class="text-slate-300 text-sm leading-relaxed">Git, Postman, GitHub Actions</p>
+        </div>
+
+        <!-- Platforms & Cloud -->
+        <div class="bg-cardBg border border-slate-800 p-6 rounded-2xl space-y-3 hover:border-accentCyan transition-all md:col-span-2 lg:col-span-3">
+          <h3 class="text-lg font-bold text-accentCyan flex items-center gap-4">
+            <i class="fa-solid fa-cloud"></i> Platforms & Cloud
+          </h3>
+          <p class="text-slate-300 text-sm leading-relaxed">GitHub, Firebase, Docker, Linux (Ubuntu), Jira</p>
+        </div>
 
       </div>
-    </div>
-    <div class="hero-image">
-      <div class="image-circle">
-        <img src="my.jpeg" alt="Sashika Hansani">
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="page-section hidden px-6 max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold text-white mb-10 border-l-4 border-accentCyan pl-4">Selected Work</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Project 1: Crystal Clear Beauty -->
+        <div class="bg-cardBg border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all flex flex-col justify-between group">
+          <div class="p-8 space-y-4">
+            <div class="flex justify-between items-start">
+              <h3 class="text-xl font-bold text-white">Crystal Clear Beauty</h3>
+              <a href="https://github.com/Sashika71" target="_blank" class="text-accentCyan hover:text-accentHover text-sm flex items-center gap-1">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+            <p class="text-mutedText text-sm leading-relaxed">
+              A full-stack E-Commerce platform with secure auth, product management, and an ordering system. Features a robust backend, optimized database, fast frontend, and a dedicated admin dashboard, fully containerized with Docker.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="text-xs bg-slate-800 text-accentCyan px-2.5 py-1 rounded-md">React.js</span>
+              <span class="text-xs bg-slate-800 text-accentCyan px-2.5 py-1 rounded-md">Tailwind CSS</span>
+              <span class="text-xs bg-slate-800 text-accentCyan px-2.5 py-1 rounded-md">Node.js</span>
+              <span class="text-xs bg-slate-800 text-accentCyan px-2.5 py-1 rounded-md">Express.js</span>
+              <span class="text-xs bg-slate-800 text-accentCyan px-2.5 py-1 rounded-md">MongoDB</span>
+              <span class="text-xs bg-slate-800 text-accentCyan px-2.5 py-1 rounded-md">Supabase</span>
+              <span class="text-xs bg-slate-800 text-accentCyan px-2.5 py-1 rounded-md">Docker</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Tracko Bus -->
+        <div class="bg-cardBg border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all flex flex-col justify-between group">
+          <div class="p-8 space-y-4">
+            <div class="flex justify-between items-start">
+              <h3 class="text-xl font-bold text-white">Tracko Bus</h3>
+              <a href="https://github.com/Sashika71" target="_blank" class="text-accentCyan hover:text-accentHover text-sm flex items-center gap-1">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+            <p class="text-mutedText text-sm leading-relaxed">
+              A community-powered mobile application solving commuter uncertainty by providing real-time bus tracking and ETA information using passenger-generated location data.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="text-xs bg-slate-800 text-accentCyan px-2.5 py-1 rounded-md">React Native</span>
+              <span class="text-xs bg-slate-800 text-accentCyan px-2.5 py-1 rounded-md">Java 25</span>
+              <span class="text-xs bg-slate-800 text-accentCyan px-2.5 py-1 rounded-md">Spring Boot</span>
+              <span class="text-xs bg-slate-800 text-accentCyan px-2.5 py-1 rounded-md">WebSockets</span>
+              <span class="text-xs bg-slate-800 text-accentCyan px-2.5 py-1 rounded-md">PostgreSQL 15</span>
+              <span class="text-xs bg-slate-800 text-accentCyan px-2.5 py-1 rounded-md">Redis 7</span>
+              <span class="text-xs bg-slate-800 text-accentCyan px-2.5 py-1 rounded-md">Docker</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: SmartMath -->
+        <div class="bg-cardBg border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all flex flex-col justify-between group">
+          <div class="p-8 space-y-4">
+            <div class="flex justify-between items-start">
+              <h3 class="text-xl font-bold text-white">SmartMath</h3>
+              <a href="https://github.com/Sashika71" target="_blank" class="text-accentCyan hover:text-accentHover text-sm flex items-center gap-1">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+            <p class="text-mutedText text-sm leading-relaxed">
+              An interactive educational web platform for students (Grades 6–9) and teachers featuring dynamic lesson quizzes, instant score tracking, and a secure administrative portal.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="text-xs bg-slate-800 text-accentCyan px-2.5 py-1 rounded-md">React.js</span>
+              <span class="text-xs bg-slate-800 text-accentCyan px-2.5 py-1 rounded-md">Tailwind CSS</span>
+              <span class="text-xs bg-slate-800 text-accentCyan px-2.5 py-1 rounded-md">Firebase</span>
+              <span class="text-xs bg-slate-800 text-accentCyan px-2.5 py-1 rounded-md">Cloud Firestore</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Gemzet -->
+        <div class="bg-cardBg border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all flex flex-col justify-between group">
+          <div class="p-8 space-y-4">
+            <div class="flex justify-between items-start">
+              <h3 class="text-xl font-bold text-white">Gemzet</h3>
+              <a href="https://github.com/Sashika71" target="_blank" class="text-accentCyan hover:text-accentHover text-sm flex items-center gap-1">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+            <p class="text-mutedText text-sm leading-relaxed">
+              A secure web platform allowing users to invest in certified gemstones through fractional ownership with asset custody, shared ownership tracking, and public auctions.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="text-xs bg-slate-800 text-accentCyan px-2.5 py-1 rounded-md">React</span>
+              <span class="text-xs bg-slate-800 text-accentCyan px-2.5 py-1 rounded-md">Go</span>
+              <span class="text-xs bg-slate-800 text-accentCyan px-2.5 py-1 rounded-md">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="page-section hidden px-6 max-w-3xl mx-auto space-y-12">
+      <div class="text-center space-y-3">
+        <h2 class="text-3xl font-bold text-white">Get In Touch</h2>
+        <p class="text-mutedText text-sm">Currently open for new opportunities. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
+      </div>
 
-  <!-- About Section -->
-<section id="about">
-  <h2>About Me</h2>
-   <p>
-    I am a graduate in <strong>Computing and Information Systems</strong> with a strong passion for 
-    <strong>cybersecurity, networking, and problem-solving</strong>. I enjoy exploring how secure systems 
-    are built and how they can be strengthened against modern threats. With a curious and analytical mindset, 
-    I approach challenges as opportunities to learn, grow, and innovate. 
-  </p>
+      <!-- Contact Form -->
+      <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl shadow-xl space-y-8">
+        <form action="mailto:sashikahansanii@gmail.com" method="post" enctype="text/plain" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <input type="text" name="name" placeholder="Your Name" required class="bg-darkBg border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-accentCyan transition-colors">
+            <input type="email" name="email" placeholder="Your Email" required class="bg-darkBg border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-accentCyan transition-colors">
+          </div>
+          <textarea name="message" rows="5" placeholder="How can we collaborate?" required class="w-full bg-darkBg border border-slate-700 rounded-lg p-4 text-sm text-white focus:outline-none focus:border-accentCyan transition-colors resize-none"></textarea>
+          <button type="submit" class="w-full bg-accentCyan text-darkBg font-bold py-3.5 rounded-lg text-sm hover:bg-accentHover transition-colors shadow-lg shadow-cyan-500/10">Send Message</button>
+        </form>
 
-  <p>
-    My interests also extend to <strong>web development</strong>, where I combine technical skills and 
-    creativity to build solutions that are not only functional but also user-friendly. I believe that 
-    technology and art can work together to create meaningful digital experiences.
-  </p>
+        <!-- Contact Info -->
+        <div class="border-t border-slate-800 pt-6 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-mutedText">
+          <div class="flex items-center space-x-3">
+            <i class="fa-solid fa-envelope text-accentCyan"></i>
+            <a href="mailto:sashikahansanii@gmail.com" class="hover:text-white transition-colors">sashikahansanii@gmail.com</a>
+          </div>
+          <div class="flex items-center space-x-3">
+            <i class="fa-solid fa-location-dot text-accentCyan"></i>
+            <span>Sabaragamuwa University of Sri Lanka, Belihuloya</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <p>
-    I am driven to <strong>contribute to impactful projects</strong>, collaborate with like-minded 
-    professionals, and continuously expand my knowledge in the ever-evolving field of computing. 
-    My goal is to apply my skills in cybersecurity and networking while embracing new challenges 
-    that push me to think critically and solve problems effectively.
-  </p>
-</section>
-
-  
-  <!-- Skill Section -->
-<!-- Add Devicon CDN link in <head> -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills-grid">
-    <div class="skill">
-      <i class="devicon-mongodb-plain colored"></i>
-      <p>MongoDB</p>
-    </div>
-    <div class="skill">
-      <i class="devicon-mysql-plain colored"></i>
-      <p>MySQL</p>
-    </div>
-    <div class="skill">
-      <i class="devicon-nodejs-plain colored"></i>
-      <p>Node.js</p>
-    </div>
-    <div class="skill">
-      <i class="devicon-react-original colored"></i>
-      <p>React</p>
-    </div>
-    <div class="skill">
-      <i class="devicon-java-plain colored"></i>
-      <p>Java</p>
-    </div>
-    <div class="skill">
-      <i class="devicon-javascript-plain colored"></i>
-      <p>JavaScript</p>
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- Projects Section -->
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="projects-grid">
-
-    <!-- Restaurant Static Website -->
-    <div class="project-card">
-      <h3>Restaurant Static Website</h3>
-      <p>A responsive restaurant website built with HTML, CSS, and JavaScript.</p>
-      <a href="https://github.com/Sashika71/First-project" target="_blank" class="repo-button">View on GitHub</a>
-    </div>
-
-    <!-- Code Fusion Backend Practice Project -->
-    <div class="project-card">
-      <h3>Code Fusion (Backend Practice)</h3>
-      <p>Ongoing backend practice project: Developing server-side logic, database integration, and API handling using Java and SQL.</p>
-      <a href="https://github.com/Praveen-Thathsara/code-fusion" target="_blank" class="repo-button">View on GitHub</a>
-    </div>
-
-  </div>
-</section>
-
-
-
-<section id="contact">
-  <h2>Contact Me</h2>
-  <p class="contact-text">
-    I’d love to connect with you! Whether you have a question, an idea to share, 
-    or just want to say hello, feel free to reach out through the form or social links below.
-  </p>
-
-  <!-- Contact Form -->
-  <div class="contact-form">
-    <form action="mailto:sashika@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-
-  <!-- Contact Info -->
-  <div class="contact-info">
-    <p><i class="fas fa-envelope"></i> 
-      <a href="mailto:sashika@gmail.com">sashikahansanii@gmail.com</a>
-    </p>
-    <p><i class="fas fa-phone"></i> 
-      <a href="tel:+94719738832">+94 71 973 8832</a>
-    </p>
-  </div>
-
-  <!-- Social Media -->
-  <div class="contact-card">
-    <a href="https://wa.me/94719738832" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://www.linkedin.com/in/sashika-hansani-5495a6334/" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://www.instagram.com/_.sashikaa_._?igsh=emo4cmZxaGtrOGYx" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://github.com/Sashika71" target="_blank"><i class="fab fa-github"></i></a>
-  </div>
-</section>
-
-
-
-
-
-
+  </main>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Sashika Hansani. All rights reserved.</p>
+  <footer class="border-t border-slate-800 py-8 px-6 text-center text-xs text-mutedText bg-darkBg">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="font-bold tracking-wider text-white">PORTFOLIO</div>
+      <p>&copy; 2026 Sashika Hansani. All rights reserved.</p>
+      <div class="flex space-x-6">
+        <a href="https://www.linkedin.com/in/sashika-hansani-5495a6334/" target="_blank" class="hover:text-accentCyan">LinkedIn</a>
+        <a href="https://github.com/Sashika71" target="_blank" class="hover:text-accentCyan">GitHub</a>
+        <a href="mailto:sashikahansanii@gmail.com" class="hover:text-accentCyan">Email</a>
+      </div>
+    </div>
   </footer>
-  <script src="script.js"></script>
 
+  <!-- Script File -->
+  <script src="script.js"></script>
 </body>
 </html>
