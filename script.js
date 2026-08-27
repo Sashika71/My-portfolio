@@ -39,28 +39,3 @@ if (form) {
     }
   });
 }
-
-document.querySelectorAll('nav a[href^="#"], #mobile-menu a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        
-        if (targetSection) {
-            const mobileMenuElement = document.getElementById('mobile-menu');
-            if (mobileMenuElement && !mobileMenuElement.classList.contains('hidden')) {
-                mobileMenuElement.classList.add('hidden');
-            }
-
-            const navHeight = 90;
-            const elementPosition = targetSection.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - navHeight;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
