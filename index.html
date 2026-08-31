@@ -48,16 +48,21 @@
     </div>
   </nav>
 
-  <!-- Main Content Wrapper -->
   <main class="flex-grow pt-20">
 
     <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center px-6 max-w-7xl mx-auto py-16">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
         <div class="space-y-6">
-          <h3 id="typing-heading" class="text-accentCyan font-semibold text-2xl tracking-wide">Hello, I'm</h3>
+          <h3 id="typing-heading" class="text-accentCyan font-semibold text-3xl tracking-wide">Hello, I'm</h3>
           <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-tight">Sashika Hansani</h1>
-          <p class="text-mutedText text-lg md:text-xl leading-relaxed">
+          
+          <!-- Software Developer & DevOps Enthusiast Title -->
+          <p class="text-white text-3xl md:text-2xl font-semibold tracking-wide">
+            Software Developer & DevOps Enthusiast
+          </p>
+
+          <p class="text-mutedText text-base md:text-lg leading-relaxed">
             Undergraduate in Computing & Information Systems <br> Sabaragamuwa University of Sri Lanka
           </p>
 
@@ -70,7 +75,7 @@
         </div>
 
         <div class="flex justify-center">
-          <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden border-2 border-slate-700 shadow-2xl shadow-cyan-500/5">
+          <div class="relative w-48 h-48 md:w-60 md:h-60 rounded-2xl overflow-hidden border-2 border-slate-700 shadow-2xl shadow-cyan-500/5">
             <img src="my.jpeg" alt="Sashika Hansani" class="w-full h-full object-cover hover:grayscale-0 transition-all duration-500">
           </div>
         </div>
@@ -83,7 +88,7 @@
       <div class="space-y-6 text-mutedText leading-relaxed bg-cardBg p-8 rounded-2xl border border-slate-800 shadow-xl">
         <p>
           I am an undergraduate in <strong class="text-white">Computing and Information Systems</strong> at the Sabaragamuwa University of Sri Lanka, with a strong passion for 
-          <strong class="text-accentCyan">Full Stack Development, DevOps, Problem Solving, and Artificial Intelligence (AI)</strong>. I thrive on building scalable applications, optimizing deployment pipelines, and leveraging modern AI technologies to solve complex real-world challenges.
+          <strong class="text-accentCyan">Full Stack Development, DevOps and Artificial Intelligence (AI)</strong>. I thrive on building scalable applications, optimizing deployment pipelines, and leveraging modern AI technologies to solve complex real-world challenges.
         </p>
         <p>
           My interests also extend to exploring secure system architectures, networking, and clean code practices. I combine technical expertise with creativity to build solutions that are not only high-performing but also user-centric and robust.
@@ -265,7 +270,10 @@
 
       <!-- Contact Form -->
       <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl shadow-xl space-y-8">
-        <form action="mailto:sashikahansanii@gmail.com" method="post" enctype="text/plain" class="space-y-6">
+        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+       
+          <input type="hidden" name="access_key" value="76bfa346-379a-41ab-83ba-fe77dc4b161a">
+
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input type="text" name="name" placeholder="Your Name" required class="bg-darkBg border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-accentCyan transition-colors">
             <input type="email" name="email" placeholder="Your Email" required class="bg-darkBg border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-accentCyan transition-colors">
